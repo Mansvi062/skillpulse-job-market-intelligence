@@ -4,7 +4,7 @@
 
 SkillPulse is an end-to-end MLOps platform that scrapes tech job postings from Adzuna (India, UK, US), extracts in-demand skills with NLP/regex, stores everything in MySQL, and serves salary predictions via FastAPI and a Streamlit dashboard — with Evidently-based drift monitoring and Docker deployment.
 
-Built by [Kartik Singh](https://github.com/kartiksingh2898).
+
 
 ---
 

@@ -7,15 +7,16 @@ USE skillpulse;
 CREATE TABLE job_postings (
     id             INT AUTO_INCREMENT PRIMARY KEY,
     source         VARCHAR(50),          -- 'adzuna', 'remoteok', etc.
+    country        VARCHAR(10),          -- 'in', 'gb', 'us', etc.
     title          VARCHAR(255),
     company        VARCHAR(255),
     location       VARCHAR(255),
     salary_min     DECIMAL(12,2),
     salary_max     DECIMAL(12,2),
-    description    TEXT,
+    description    LONGTEXT,
     posted_date    DATE,
     scraped_at     DATETIME DEFAULT CURRENT_TIMESTAMP,
-    raw_json       JSON                  -- keep the original API response, cheap insurance
+    raw_json       LONGTEXT              -- store as LONGTEXT instead of JSON for pandas compatibility
 );
 
 CREATE TABLE skills (
